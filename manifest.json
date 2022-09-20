@@ -1,0 +1,21 @@
+{
+    "name": "Aland newspapers unlocked",
+    "version": "1.0.0",
+    "description": "Removes paywall from alandstidningen",
+    "manifest_version": 3,
+"permissions": ["activeTab", "scripting"],
+    "author": "Dag Karlsson",
+    "action":{
+    "default_popup": "popup.html",
+        "default_title": "Åland newspaper unlocker",
+    "default_icon": {
+      "16": "/alandstidningen.png"
+    }
+    },
+      "content_scripts": [
+        {
+          "matches": ["https://*.alandstidningen.ax/*"],
+          "js": ["content.js"]
+        }
+      ]
+}
